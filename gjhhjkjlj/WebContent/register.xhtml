@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+<h:form>
+
+<p:panelGrid>
+<h:outputLabel value="ID:"/>
+<p:inputText value="#{CarList.id}"/>
+<br></br>
+<h:outputLabel value="Brand:"/>
+<p:inputText value="#{CarList.brand}"/>
+<br></br>
+<h:outputLabel value="Color:"/>
+<p:inputText value="#{CarList.color}"/>
+<br></br>
+<h:outputLabel value="Price:"/>
+<p:inputText value="#{CarList.price}"/>
+<br></br>
+<h:outputLabel value="Name:"/>
+<p:inputText value="#{CarList.name}"/>
+<br></br>
+<h:outputLabel value="Password:"/>
+<p:inputText value="#{CarList.password}"/>
+<br></br>
+<p:commandButton value="register" action="#{CarList.register()}">
+</p:commandButton>
+</p:panelGrid>
+
+
+
+
+</h:form>
+</h:body>
+
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<body>
+<h:form binding="#{timerBean.form1}" id="form1">
+        <p>
+          <h:dataTable value="#{timerBean.questions}" var="question"
+          paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink}" rowsPerPageTemplate="1">           
+            <h:column>                    
+              <h:outputText value="#{question.questionText}"/>
+              <p:selectOneRadio layout="pageDirection">               
+                    <f:selectItem itemValue="#{question.Opt1}" />     
+                    <f:selectItem itemValue="#{question.Opt2}" />     
+                    <f:selectItem itemValue="#{question.Opt3}" />     
+                    <f:selectItem itemValue="#{question.Opt4}" />                        
+              </p:selectOneRadio>              
+            </h:column>
+          </h:dataTable>
+          <p:commandButton value="Next" action="#{timerBean.compare}"></p:commandButton>
+        </p>
+        <p>
+          <h:messages/>
+        </p>
+        <p>
+              
+      </h:form>
+      </body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+</h:body>
+<h:form>
+
+	<p:panelGrid columns="2">
+   
+    <h:outputText value="Id:" />
+    <h:outputText value="#{bnm.id}" />
+     
+    <h:outputText value="Brand:" />
+    <h:outputText value="#{bnm.brand}" />
+     
+    <h:outputText value="Color:" />
+    <h:outputText value="#{bnm.color}" />
+     
+    <h:outputText value="Price:" />
+    <h:outputText value="#{bnm.price}" />
+</p:panelGrid>
+	<p:spacer></p:spacer>
+
+	<div style="text-align: center;">
+
+		<p:commandButton value="Back" action="datatable.xhtml"
+			class="btn btn-primary" style="width:80px" update="form" ajax="false">
+		</p:commandButton>
+
+	</div>
+
+</h:form>
+
+</html>
